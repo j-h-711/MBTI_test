@@ -8,8 +8,8 @@
 
 ## 구현사항
 
-react를 접한 후 첫 프로젝트
+### react를 접한 후 첫 프로젝트
 
-### Router로 SPA 개발
+#### Router로 SPA 개발
 
-### styled-components 적용
+#### styled-components 적용
