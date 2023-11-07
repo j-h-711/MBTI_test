@@ -106,7 +106,7 @@ function ResultPage(props) {
       img: "",
       subtitle: "당신은 ENFJ 입니다.",
       cont1: "ENFJ는 정의로운 사회운동가 입니다.",
-      cont2: "당신은 지구의 평화 수호자가 되는걸 추천합니다!",
+      cont2: "당신은 지구의 평화 수호자 슈퍼맨이 되는걸 추천합니다!",
     },
     ENFP: {
       img: "",
@@ -160,7 +160,7 @@ function ResultPage(props) {
       img: "",
       subtitle: "당신은 ESFP 입니다.",
       cont1: "ESFP는 자유로운 영혼의 연예인 입니다.",
-      cont2: "당신은 중학교 수학여행 레크렐이션 강사가 되는걸 추천합니다!",
+      cont2: "당신은 중학교 수학여행 레크레이션 강사가 되는걸 추천합니다!",
     },
   };
 
