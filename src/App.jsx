@@ -1,9 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 import "./App.css";
-import MainPage from "./routes/MainPage";
-import ResultPage from "./routes/ResultPage";
-import TestPage from "./routes/TestPage";
+import MainPage from "./routes/MainPage/MainPage";
+import ResultPage from "./routes/ResultPage/ResultPage";
+import TestPage from "./routes/TestPage/TestPage";
 
 function App() {
   const [EI, setEI] = useState(0);
@@ -26,6 +26,8 @@ function App() {
                 setSN={setSN}
                 setTF={setTF}
                 setJP={setJP}
+                setMBTI={setMBTI}
+                setDatas={setDatas}
               />
             }
           />

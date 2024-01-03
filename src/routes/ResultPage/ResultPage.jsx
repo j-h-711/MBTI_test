@@ -1,56 +1,16 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { redirect, useNavigate } from "react-router-dom";
 import styled from "styled-components";
-
-let BoxContainer = styled.div`
-  text-align: center;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  background: #f8e692;
-  color: #69a65a;
-`;
-let SubBox = styled.div`
-  margin: 1rem;
-  padding: 1rem;
-  border: none;
-  border-radius: 1rem;
-  background: #d8b975;
-  color: #69a65a;
-`;
-let Title = styled.div`
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 3rem;
-  font-weight: bold;
-  color: #dc9e77;
-`;
-let SubTitle = styled.div`
-  font-size: 1.5rem;
-`;
-let Contents = styled.div`
-  margin-top: 10px;
-  font-size: 1.5rem;
-`;
-let ImgWrap = styled.div`
-  margin: auto;
-  max-width: 800px;
-  padding: 2rem;
-`;
-let ImgBox = styled.img`
-  border-radius: 1rem;
-  width: 50%;
-`;
-let BTN = styled.button`
-  margin-top: 50px;
-  margin-bottom: 30px;
-  padding: 1rem;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 1rem;
-  background: #dc9e77;
-  color: #f8e692;
-`;
+import {
+  BoxContainer,
+  SubBox,
+  Title,
+  SubTitle,
+  Contents,
+  ImgWrap,
+  ImgBox,
+  BTN,
+} from "./ResultPage.styles";
 
 function ResultPage(props) {
   let navigate = useNavigate();
@@ -124,7 +84,7 @@ function ResultPage(props) {
       img: "",
       subtitle: "당신은 ISFJ 입니다.",
       cont1: "ISFJ는 용감한 수호자 입니다.",
-      cont2: "당신은 원생 100을 책임지는 유치원 교사가 되는걸 추천합니다!",
+      cont2: "당신은 원생 100명을 책임지는 유치원 교사가 되는걸 추천합니다!",
     },
     ESTJ: {
       img: "",
@@ -136,7 +96,7 @@ function ResultPage(props) {
       img: "",
       subtitle: "당신은 ESFJ 입니다.",
       cont1: "ESFJ는 사교적인 외교관 입니다.",
-      cont2: "당신은 맘카페 계모임 총무를 하는걸 추천합니다!",
+      cont2: "당신은 계모임 총무를 하는걸 추천합니다!",
     },
     ISTP: {
       img: "",
@@ -163,6 +123,8 @@ function ResultPage(props) {
       cont2: "당신은 중학교 수학여행 레크레이션 강사가 되는걸 추천합니다!",
     },
   };
+
+  console.log(result);
 
   return (
     <BoxContainer>

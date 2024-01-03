@@ -1,53 +1,14 @@
 import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
-import styled from "styled-components";
-
-const CenteredBoxContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-`;
-let BoxContainer = styled.div`
-  text-align: center;
-  border-radius: 1rem;
-  margin: 1rem;
-  padding: 1rem;
-  background: #f8e692;
-  color: #69a65a;
-`;
-let ImgWrap = styled.div`
-  margin: auto;
-  max-width: 800px;
-  padding: 2rem;
-`;
-let ImgBox = styled.img`
-  border-radius: 1rem;
-  width: 100%;
-`;
-let BTN = styled.button`
-  padding: 1rem;
-  margin-bottom: 1rem;
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  border: none;
-  border-radius: 1rem;
-  background: #dc9e77;
-  width: 100%;
-  color: #f8e692;
-  cursor: pointer;
-`;
-
-let Title = styled.div`
-  margin: 1rem;
-  padding: 1rem;
-  font-size: 2.5rem;
-  color: #dc9e77;
-`;
-let SubTitle = styled.div`
-  font-size: 1.5rem;
-  margin-bottom: 30px;
-`;
+import {
+  CenteredBoxContainer,
+  BoxContainer,
+  ImgWrap,
+  ImgBox,
+  BTN,
+  Title,
+  SubTitle,
+} from "../TestPage/TestPage.styles";
 
 function TestPage(props) {
   useEffect(() => {
@@ -55,27 +16,28 @@ function TestPage(props) {
     let data = [];
     if (props.EI > 0) {
       data.push("E");
-    } else if (props.EI < 0) {
+    } else {
       data.push("I");
     }
 
     if (props.SN > 0) {
       data.push("S");
-    } else if (props.SN < 0) {
+    } else {
       data.push("N");
     }
 
     if (props.TF > 0) {
       data.push("T");
-    } else if (props.TF < 0) {
+    } else {
       data.push("F");
     }
 
     if (props.JP > 0) {
       data.push("J");
-    } else if (props.JP < 0) {
+    } else {
       data.push("P");
     }
+    console.log("결과", data);
 
     // 배열을 join 통해서 하나의 문자로 바꾸고 setDatas 해줌
     props.setDatas(data.join(""));
@@ -86,7 +48,7 @@ function TestPage(props) {
 
   let navigate = useNavigate();
   const [num, setNum] = useState(1);
-  const [data] = useState({
+  const initialData = {
     1: {
       ques: "친구가 자기도 같이 놀자는데 어떻게 할까?",
       ans1: "1 : 그래! 불러서 같이 놀자",
@@ -147,12 +109,13 @@ function TestPage(props) {
       ans1: "1 : 5시부터는 준비를 하고 10분 일찍 도착하게 6시쯤 출발해야지",
       ans2: "2 : 7시 약속인데 이미 6시30분이네! 얼른 나가야겠다!",
     },
-  });
+  };
+
   return (
     <CenteredBoxContainer>
       <BoxContainer>
         <Title>Q{num}</Title>
-        <SubTitle>Q : {data[num].ques}</SubTitle>
+        <SubTitle>Q : {initialData[num].ques}</SubTitle>
         <BTN
           onClick={() => {
             setNum((prev) => prev + 1);
@@ -171,7 +134,7 @@ function TestPage(props) {
             }
           }}
         >
-          {data[num].ans1}
+          {initialData[num].ans1}
         </BTN>
         <BTN
           onClick={() => {
@@ -190,7 +153,7 @@ function TestPage(props) {
             }
           }}
         >
-          {data[num].ans2}
+          {initialData[num].ans2}
         </BTN>
       </BoxContainer>
     </CenteredBoxContainer>
