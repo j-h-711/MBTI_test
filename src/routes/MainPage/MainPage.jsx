@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import mainIMG from "../../assets/img/mbti_img.jpg";
 import styled from "styled-components";
 import {
   CenteredBoxContainer,
@@ -31,10 +32,7 @@ function Main(props) {
       <BoxContainer>
         <Title>MBTI 테스트</Title>
         <ImgWrap>
-          <ImgBox
-            alt="main_img"
-            src="https://img.freepik.com/premium-photo/four-wooden-blocks-with-the-letter-mbti-myersbriggs-type-indicators_773973-814.jpg?w=1060"
-          ></ImgBox>
+          <ImgBox alt="main_img" src={mainIMG}></ImgBox>
         </ImgWrap>
         <BTN onClick={handleStartTest}>시작하기</BTN>
       </BoxContainer>

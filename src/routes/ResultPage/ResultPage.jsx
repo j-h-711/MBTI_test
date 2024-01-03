@@ -1,5 +1,24 @@
 import React, { useEffect, useState } from "react";
 import { redirect, useNavigate } from "react-router-dom";
+import ENFJ from "../../assets/img/ENFJ.png";
+import ENFP from "../../assets/img/ENFP.png";
+import ENTJ from "../../assets/img/ENTJ.png";
+import ENTP from "../../assets/img/ENTP.png";
+import ESFJ from "../../assets/img/ESFJ.png";
+import ESFP from "../../assets/img/ESFP.png";
+import ESTJ from "../../assets/img/ESTJ.png";
+import ESTP from "../../assets/img/ESTP.png";
+import INFJ from "../../assets/img/INFJ.png";
+import INTJ from "../../assets/img/INTJ.png";
+import INFP from "../../assets/img/INFP.png";
+import INTP from "../../assets/img/INTP.png";
+import ISFJ from "../../assets/img/ISFJ.png";
+import ISFP from "../../assets/img/ISFP.png";
+import ISTP from "../../assets/img/ISTP.png";
+import ISTJ from "../../assets/img/ISTJ.png";
+
+// import * as images from "../../assets/img";
+
 import styled from "styled-components";
 import {
   BoxContainer,
@@ -17,6 +36,25 @@ function ResultPage(props) {
 
   const whatMBTI = props.MBTI;
   const [result, setResult] = useState("");
+
+  const imageMapping = {
+    ENFJ: ENFJ,
+    ENFP: ENFP,
+    ENTJ: ENTJ,
+    ENTP: ENTP,
+    ESFJ: ESFJ,
+    ESFP: ESFP,
+    ESTJ: ESTJ,
+    ESTP: ESTP,
+    INFJ: INFJ,
+    INTJ: INTJ,
+    INFP: INFP,
+    INTP: INTP,
+    ISFJ: ISFJ,
+    ISFP: ISFP,
+    ISTP: ISTP,
+    ISTJ: ISTJ,
+  };
 
   useEffect(() => {
     if (whatMBTI) {
@@ -131,10 +169,7 @@ function ResultPage(props) {
         <div>
           <SubTitle>{data[result].subtitle}</SubTitle>
           <ImgWrap>
-            <ImgBox
-              alt="main_img"
-              src="https://newimage.pawco.kr/64/44/68/6501f366fc62b2257bb0358eab39f09181.jpg?anilimit=20&quality=85&type=w&w=800"
-            ></ImgBox>
+            <ImgBox alt="result_img" src={imageMapping[whatMBTI]}></ImgBox>
           </ImgWrap>
           <Contents>{data[result].cont1}</Contents>
           <Contents>{data[result].cont2}</Contents>
