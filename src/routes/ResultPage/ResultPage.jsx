@@ -124,8 +124,6 @@ function ResultPage(props) {
     },
   };
 
-  console.log(result);
-
   return (
     <BoxContainer>
       <Title>당신의 MBTI는 ?!</Title>

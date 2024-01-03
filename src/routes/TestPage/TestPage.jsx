@@ -37,7 +37,6 @@ function TestPage(props) {
     } else {
       data.push("P");
     }
-    console.log("결과", data);
 
     // 배열을 join 통해서 하나의 문자로 바꾸고 setDatas 해줌
     props.setDatas(data.join(""));

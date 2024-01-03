@@ -34,6 +34,16 @@ export const BTN = styled.button`
   width: 100%;
   color: #f8e692;
   cursor: pointer;
+
+  @media (max-width: 699px) {
+    font-size: 1rem;
+  }
+
+  @media (min-width: 700px) and (max-width: 1200px) {
+    font-size: 1.5rem;
+    max-height: 500px;
+    padding: 0.8rem;
+  }
 `;
 
 export const Title = styled.div`
@@ -41,8 +51,28 @@ export const Title = styled.div`
   padding: 1rem;
   font-size: 2.5rem;
   color: #dc9e77;
+
+  @media (max-width: 699px) {
+    font-size: 1.5rem;
+  }
+
+  @media (min-width: 700px) and (max-width: 1200px) {
+    font-size: 2rem;
+    max-height: 500px;
+    padding: 0.8rem;
+  }
 `;
 export const SubTitle = styled.div`
   font-size: 1.5rem;
   margin-bottom: 30px;
+
+  @media (max-width: 699px) {
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 700px) and (max-width: 1200px) {
+    font-size: 1.5rem;
+    max-height: 500px;
+    padding: 0.8rem;
+  }
 `;
