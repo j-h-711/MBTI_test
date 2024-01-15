@@ -25,7 +25,7 @@ export const Title = styled.div`
     font-size: 2rem;
   }
 
-  @media (min-width: 500px) and (max-width: 1200px) {
+  @media (min-width: 500px) and (max-width: 1600px) {
     font-size: 2.5rem;
   }
 `;
@@ -45,7 +45,7 @@ export const BTN = styled.button`
     font-size: 1rem;
   }
 
-  @media (min-width: 601px) and (max-width: 1200px) {
+  @media (min-width: 601px) and (max-width: 1600px) {
     font-size: 1.5rem;
     max-height: 500px;
     padding: 0.8rem;
@@ -65,7 +65,7 @@ export const BoxContainer = styled.div`
     margin: 1rem;
     padding: 0.2rem;
   }
-  @media (min-width: 601px) and (max-width: 1200px) {
+  @media (min-width: 601px) and (max-width: 1600px) {
     font-size: 2.5rem;
     max-height: 500px;
     padding-top: 0;
@@ -80,7 +80,7 @@ export const ImgWrap = styled.div`
   @media (max-width: 600px) {
     font-size: 1rem;
   }
-  @media (min-width: 601px) and (max-width: 1200px) {
+  @media (min-width: 601px) and (max-width: 1600px) {
     max-width: 500px;
     margin-top: 0px;
     padding: 0px;
